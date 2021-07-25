@@ -1,0 +1,8 @@
+﻿@model RedditModel 
+    @*Rootobject*@
+
+@foreach(var post in Model.data.children)
+{
+   var poster = @post.data;
+    <img src="@poster.thumbnail" width="@poster.thumbnail_width" height="@poster.thumbnail_height" />
+}
